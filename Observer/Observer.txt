@@ -1,0 +1,14 @@
+class IncrementalNumberGenerator
+{
+    public:
+        IncrementalNumberGenerator();
+        ~IncrementalNumberGenerator();
+
+        int GetNumber(){return m_Number;}
+        void CreateNumber();
+
+    private:
+        int m_Number;
+        int m_End;
+        int m_Increce;
+}

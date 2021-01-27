@@ -1,0 +1,9 @@
+@startuml クラス図
+
+class TiketMaker
+{
+    public:
+    TiketMaker
+}
+
+@enduml

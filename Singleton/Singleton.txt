@@ -1,0 +1,37 @@
+・問題５－１
+    class TicketMaker : Singleton<TicketMaker>
+    {
+        public:
+            TicketMaker();
+            ~TicketMaker();
+
+            static TicketMaker getInstance(){return m_pTicketMaker;}
+            int GetNextTicketNumber(){return m_ticket++;}
+
+        private:
+            int m_ticket = 1000;
+            static TicketMaker* m_pTicketMaker;
+    }
+
+・問題５－２
+    class Triple : Singleton
+    {
+        public:
+            Triple();
+            ~Triple();
+
+            static Triple getInstance(int id){return m_pTriple[m_id];}
+
+        private:
+            int m_id;
+
+            Triple[] m_pTriple = new Triple[]
+            {
+                new Triple[0],
+                new Triple[1],
+                new Triple[2],
+            };
+    }
+
+・問題５－３
+getInstanceが呼ばれたときに複数のインスタンスが生成されてしまう可能性があるから
